@@ -1,17 +1,14 @@
-package com.codeoftheweb.salvo;
+package com.codeoftheweb.salvo.models;
 
-import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
-import static java.util.stream.Collectors.toSet;
-
 @Entity
 public class GamePlayer {
-
+    //------------------------------------SPRING DEPENDENCIES--------------------------------------
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")

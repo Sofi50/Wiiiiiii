@@ -1,4 +1,4 @@
-package com.codeoftheweb.salvo;
+package com.codeoftheweb.salvo.models;
 
 import net.minidev.json.annotate.JsonIgnore;
 import org.hibernate.annotations.GenericGenerator;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 @Entity
 public class Player {
-
+    //------------------------------------SPRING DEPENDENCIES--------------------------------------
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")

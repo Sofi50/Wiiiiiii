@@ -1,5 +1,7 @@
 package com.codeoftheweb.salvo;
 
+import com.codeoftheweb.salvo.models.*;
+import com.codeoftheweb.salvo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -40,11 +42,11 @@ public class SalvoApplication {
 
 	@Bean
 	public CommandLineRunner initData(PlayerRepository playerRepository,
-									  GameRepository gameRepository,
-									  GamePlayerRepository gPRepository,
-									  ShipRepository shipRepository,
-									  SalvoRepository salvoRepository,
-									  ScoreRepository scoreRepository) {
+                                      GameRepository gameRepository,
+                                      GamePlayerRepository gPRepository,
+                                      ShipRepository shipRepository,
+                                      SalvoRepository salvoRepository,
+                                      ScoreRepository scoreRepository) {
 		return (args) -> {
 			Player player1 = playerRepository.save(new Player("Jack@hotmail.com", passwordEncoder().encode("24")));
 			Player player2 = playerRepository.save(new Player("Chloe@hotmail.com", passwordEncoder().encode("42")));

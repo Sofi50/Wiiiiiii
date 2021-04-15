@@ -1,4 +1,4 @@
-package com.codeoftheweb.salvo;
+package com.codeoftheweb.salvo.models;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -6,8 +6,8 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-public class Ship {
-
+public class    Ship {
+    //------------------------------------SPRING DEPENDENCIES--------------------------------------
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
